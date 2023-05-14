@@ -21,22 +21,11 @@ const MoviePage = ({ data }) => {
         }
     }
 
-    // const getGenres = async () => {
-    //     const genres = await axios.get(addApiKey(`${baseApiUrl}/genre/movie/list`));
-
-    //     console.log(genres)
-    // }
-
-    // useEffect(() => {
-    //     if(movieInfo.genre_ids) {
-    //         getGenres();
-    //     }
-    // }, [movieInfo])
     useEffect(() => {
         if (data) {
             getMovieData();
         }
-    }, [])
+    }, [data])
     return (
         movieInfo.poster_path && <div className={styles.wrapper} style={{ backgroundImage: `url(https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${movieInfo.backdrop_path})` }}>
         <div className={styles.innerWrapper}>
