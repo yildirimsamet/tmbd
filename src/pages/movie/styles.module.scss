@@ -1,0 +1,43 @@
+.wrapper {
+    .innerWrapper {
+        background-image: linear-gradient(to right, rgba(31.5, 31.5, 31.5, 1) calc((50vw - 170px) - 340px), rgba(31.5, 31.5, 31.5, 0.84) 50%, rgba(31.5, 31.5, 31.5, 0.84) 100%);
+    }
+    .shortcut {
+        background: white;
+        height: 46px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .main {
+        padding: 25px;
+        color: white;
+        display: flex;
+        gap: 50px;
+         &Left {
+             img {
+                 width: 300px;
+                 height: 450px;
+                 border-radius: 15px;
+             }
+         }
+         &Right {
+            width: 980px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .title {
+                font-size: 36px;
+            }
+            .overviewTitle {
+                font-weight: bold;
+                font-size: 22px;
+                margin-top: 25px;
+            }
+            .genre {
+                margin: 0 10px;
+            }
+         }
+    }
+}

@@ -1,0 +1,82 @@
+.wrapper {
+    margin-top: 25px;
+    padding: 0 40px;
+    &Top {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+        &Title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        &Toggle {
+            width: 200px;
+            padding: 2px;
+            display: flex;
+            border: 1px solid #000;
+            border-radius: 25px;
+            position: relative;
+            font-weight: bold;
+            &Shadow {
+                background-color: rgb(3,37,65);
+                position: absolute;
+                width: 50%;
+                border-radius: 25px;
+                height: 100%;
+                top: 0;
+                z-index: -1;
+                transition: .3s ease all;
+                &Left {
+                    left: 0;
+                }
+                &Right {
+                    left: 50%;
+                }
+            }
+            &Left, &Right {
+                flex: 1;
+                text-align: center;
+                cursor: pointer;
+            }
+            &Left {
+                border-radius: 25px 0 0 25px;
+            }
+            &Right {
+                border-radius: 0 25px 25px 0;
+                
+            }
+            &Active {
+                background: linear-gradient(to right, #c0fecf 0%, #1ed5a9 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+    &Bottom {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        gap: 20px;
+        padding-bottom: 75px;
+        margin-top: 20px;
+        &::-webkit-scrollbar {
+            height: 8px;
+          }
+          
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+            
+          }
+
+        &::-webkit-scrollbar-thumb {
+            background: #888; 
+            border-radius: 10px;
+          }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+          }
+    }
+}

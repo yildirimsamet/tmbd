@@ -1,0 +1,42 @@
+.dropdown {
+    &Wrapper {
+        margin-right: 14px;
+        position: relative;
+        &:hover .dropdownMenu{
+            display: flex;
+        }
+    }
+
+    &Title {
+        color: #fff;
+        cursor: pointer;
+        padding: 10px;
+        font-weight: 500;
+    }
+
+    &Menu {
+        display: none;
+        width: 250px;
+        position: absolute;
+        z-index: 99;
+        padding: 15px 25px;
+        flex-direction: column;
+        background: #fff;
+        max-width: 200px;
+        border:1px solid #e5e5e5;
+        border-radius: 4px;
+    
+        &Item {
+            color: #000;
+            margin-bottom: 5px;
+        }
+    }
+
+    &Top {
+        bottom: 40px;
+    }
+
+    &Bottom {
+        top: 40px;
+    }
+}
