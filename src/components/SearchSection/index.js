@@ -13,7 +13,7 @@ const SearchSection = ({ handleCloseSearch }) => {
   const { baseApiUrl } = enums;
   const [searchText, setSearchText] = useState("");
   const [searchDatas, setSearchDatas] = useState([]);
-  const [favouriteMovies, setFavouriteMovies] = useState(JSON.parse(localStorage.getItem("favouriteMovies")) || [9613]);
+  const [favouriteMovies, setFavouriteMovies] = useState(JSON.parse(localStorage.getItem("favouriteMovies")) || []);
 
   const changeSearchText = (event) => setSearchText(event.target.value);
 
