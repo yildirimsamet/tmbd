@@ -26,16 +26,27 @@
         &Wrapper {
             display: flex;
             flex-direction: column;
+            background: #f8f7f7;
 
             &ItemWrapper {
                 border-bottom: 1px solid #e5e5e5;
                 background: #f8f7f7;
                 padding: 5px 0;
+                display: flex;
+                align-items: center;
 
                 &:hover {
                     background-color: #efefef;           
                 }
             }
         }
+    }
+}
+
+.favIcon {
+    cursor: pointer;
+
+    &Active {
+        fill: rgb(216, 191, 29) !important;
     }
 }
